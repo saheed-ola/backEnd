@@ -13,7 +13,9 @@ import userModel from "../models/userModel.js"
     }catch(error){
       return res.status(500).json({'error fetching users': error.message})
     }
-  }// READ SINGLE OPERATION
+  }
+  
+  // READ SINGLE OPERATION
 export const getSingleUser =  async(req, res)=> {
     try{
 
