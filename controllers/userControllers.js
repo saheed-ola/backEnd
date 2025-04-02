@@ -1,7 +1,7 @@
 import userModel from "../models/userModel.js"
 
 // READ ALL OPERATION
- export const getSingleUser = async(req, res)=>{
+ export const getUser = async(req, res)=>{
 
     try{
       const users = await userModel.find()
@@ -14,7 +14,7 @@ import userModel from "../models/userModel.js"
       return res.status(500).json({'error fetching users': error.message})
     }
   }// READ SINGLE OPERATION
-export const getUser =  async(req, res)=> {
+export const getSingleUser =  async(req, res)=> {
     try{
 
       const {id} = req.params
